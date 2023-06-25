@@ -1,0 +1,36 @@
+body {
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+    background-color: #FFFFFF;
+}
+
+.title p {
+    Font: Inter;
+    font-weight: 700;
+    font-Size: 20px;
+    Line-height: 24.2px;
+    color: #161616;
+}
+
+textarea:focus,
+input:focus {
+    color: #928080;
+}
+
+input {
+
+    background-color: transparent;
+    border: 1px solid #C8C8C8;
+    border-radius: 10px;
+    padding-left: 12px;
+}
+
+::placeholder {
+    color: #F1F1F1;
+    opacity: 1;
+}
+
+label {
+    color: #161616;
+}
