@@ -48,24 +48,28 @@
                     </div>
                 </div>
             </div>
+
+
             <div class="col-6 d-flex justify-content-center  ">
                 <div class="box d-flex  flex-column" style="padding-top: 220px;">
-                    <form onsubmit="return  validacia()" style="display: flex; flex-direction: column;">
+                    <form onsubmit="return  validacia()" id="myform" style="display: flex; flex-direction: column;">
                         <label for="number"><b>Card Number</b></label>
                         <input type="text" id="input1" autocomplete="off" placeholder="1234 3231 2341 2231"
                             style="width: 515px; height: 55px; "><br>
-                        <span id="inp1" style="color: red;"></span>
+                        <span id="inp1" style="color: red; font-size: 12px;;"></span>
                         <label for="name"><b>Name</b></label>
                         <input type="name" id="input2" placeholder="Nick Monkey"
                             style="width: 515px; height: 55px;"><br>
-                        <span id="inp2" style="color: red;"></span>
+                        <span id="inp2" style="color: red; font-size: 12px;"></span>
                         <div class="last-div d-flex flex-row" style="gap: 70px;">
                             <div class="exp-div ">
                                 <label for=""><b>Exp Date</b> </label>
                                 <div class="two-inp-div d-flex" style="gap: 12px" ;>
-                                    <input type="name" id="input3" placeholder="17" style="width: 87px; height: 55px; ">
+                                    <input type="name" id="input3" placeholder="17"
+                                        style="width: 87px; height: 55px; padding-left: 30px;">
                                     <span id="inp3"></span>
-                                    <input type="name" id="input4" placeholder="23" style="width: 87px; height: 55px;">
+                                    <input type="name" id="input4" placeholder="23"
+                                        style="width: 87px; height: 55px; padding-left: 30px;">
                                     <span id="inp4"></span>
                                 </div>
                             </div>

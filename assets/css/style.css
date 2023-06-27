@@ -34,3 +34,8 @@ input {
 label {
     color: #161616;
 }
+
+.input1:hover {
+
+    border: 3px solid red;
+}

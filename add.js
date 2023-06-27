@@ -1,25 +1,23 @@
 
+
 function numberValidationFunc() {
     var input1 = document.getElementById("input1").value;
     var pattern = /^[0-9]+$/;
     if (input1.match(pattern)) {
         document.getElementById("inp1").innerHTML = "";
         input1.style.border = " 2px solid green";
+        return false;
     }
+
     else {
         document.getElementById("inp1").innerHTML = "Woops! wrong format, numbers only.";
-
-    }
-    if (input1.value == "") {
         input1.style.border = "2px solid red";
-
-    } else {
-        input1.style.border = " 2px solid green";
-        document.getElementById("inp1").innerHTML = "";
     }
 
     return false;
+
 }
+
 
 function validacia() {
 
@@ -29,9 +27,7 @@ function validacia() {
     var input4 = document.getElementById("input4");
     var input5 = document.getElementById("input5");
 
-
-
-    if (input2.value == "") {
+    if (input2.value == "" || input3.length == 0) {
         input2.style.border = "2px solid red";
         document.getElementById("inp2").innerHTML = "Forgot name?";
     } else {
@@ -57,7 +53,11 @@ function validacia() {
         input5.style.border = "2px solid green";
     }
 
+    document.getElementById("myform").reset();
     return false;
+
+
 }
+
 
 
