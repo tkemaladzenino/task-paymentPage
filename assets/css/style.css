@@ -13,10 +13,6 @@ body {
     color: #161616;
 }
 
-textarea:focus,
-input:focus {
-    color: #928080;
-}
 
 input {
 

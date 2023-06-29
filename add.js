@@ -1,9 +1,10 @@
 
 
 
+
 function validacia() {
     var input1 = document.getElementById("input1").value;
-
+    var pattern = /^[0-9]+$/;
     var input2 = document.getElementById("input2");
     var input3 = document.getElementById("input3");
     var input4 = document.getElementById("input4");
@@ -11,20 +12,15 @@ function validacia() {
 
 
 
+    if (input1.match(pattern)) {
 
-    if (input1.value == "") {
-        input1.style.border = "2px solid red";
-
-
-    }
-    else if (isNaN(input1)) {
-        document.getElementById("inp1")
-            .innerHTML = "Please enter Numeric value";
-        document.getElementById("input1").style.border = "2px solid red";
+        document.getElementById("input1").style.border = "2px solid green";
+        document.getElementById("inp1").innerHTML = "";
 
     } else {
-        document.getElementById("inp1").innerHTML = "greate";
-        document.getElementById("input1").style.border = "2px solid green";
+
+        document.getElementById("inp1").innerHTML = "Woops! wrong format, numbers only.";
+        document.getElementById("input1").style.border = "2px solid red";
 
     }
 
