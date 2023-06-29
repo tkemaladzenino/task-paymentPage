@@ -1,33 +1,35 @@
 
 
-function numberValidationFunc() {
-    var input1 = document.getElementById("input1").value;
-    var pattern = /^[0-9]+$/;
-    if (input1.match(pattern)) {
-        document.getElementById("inp1").innerHTML = "";
-        input1.style.border = " 2px solid green";
-        return false;
-    }
-
-    else {
-        document.getElementById("inp1").innerHTML = "Woops! wrong format, numbers only.";
-        input1.style.border = "2px solid red";
-    }
-
-    return false;
-
-}
-
 
 function validacia() {
-
+    var input1 = document.getElementById("input1").value;
 
     var input2 = document.getElementById("input2");
     var input3 = document.getElementById("input3");
     var input4 = document.getElementById("input4");
     var input5 = document.getElementById("input5");
 
-    if (input2.value == "" || input3.length == 0) {
+
+
+
+    if (input1.value == "") {
+        input1.style.border = "2px solid red";
+
+
+    }
+    else if (isNaN(input1)) {
+        document.getElementById("inp1")
+            .innerHTML = "Please enter Numeric value";
+        document.getElementById("input1").style.border = "2px solid red";
+
+    } else {
+        document.getElementById("inp1").innerHTML = "greate";
+        document.getElementById("input1").style.border = "2px solid green";
+
+    }
+
+
+    if (input2.value == "" || input2.length == 0) {
         input2.style.border = "2px solid red";
         document.getElementById("inp2").innerHTML = "Forgot name?";
     } else {
@@ -53,11 +55,10 @@ function validacia() {
         input5.style.border = "2px solid green";
     }
 
-    document.getElementById("myform").reset();
     return false;
 
-
 }
+
 
 
 
