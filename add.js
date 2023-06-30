@@ -13,15 +13,12 @@ function validacia() {
 
 
     if (input1.match(pattern)) {
-
         document.getElementById("input1").style.border = "2px solid green";
         document.getElementById("inp1").innerHTML = "";
 
     } else {
-
         document.getElementById("inp1").innerHTML = "Woops! wrong format, numbers only.";
         document.getElementById("input1").style.border = "2px solid red";
-
     }
 
 
