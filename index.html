@@ -16,8 +16,20 @@
 
     </script>
 </head>
+<style>
+    input {
+
+        &:active,
+        &:focus {
+            outline: none;
+        }
+    }
+</style>
+
 
 <body>
+
+
     <div class="container-fluid">
         <div class="row ">
             <div class="col-6 p-0 m-0 position-relative">
@@ -52,27 +64,34 @@
                     <form onsubmit="return  validacia()" id="myform" style="display: flex; flex-direction: column;">
                         <label for="number"><b>Card Number</b></label>
                         <input type="text" autofill="off" maxlength="12" id="input1" placeholder="1234 3231 2341 2231"
-                            style="width: 515px; height: 55px;"><br>
-                        <span id="inp1" style="color: red; font-size: 12px;;"></span>
+                            oninput="validacia()" style="width: 515px; height: 55px;"><br>
+                        <div class="span-div position-absolute" style="top: 304px;">
+                            <span id="inp1" style="color: red; font-size: 14px;"></span>
+                        </div>
+
                         <label for="name"><b>Name</b></label>
-                        <input type="name" id="input2" maxlength="2" placeholder="Nick Monkey"
+                        <input type="name" id="input2" placeholder="Nick Monkey" oninput="validacia()"
                             style="width: 515px; height: 55px;"><br>
-                        <span id="inp2" style="color: red; font-size: 12px;"></span>
-                        <div class="last-div d-flex flex-row" style="gap: 70px;">
+                        <div class="span-div position-absolute" style="top: 406px;">
+                            <span id="inp2" style="color: red; font-size: 14px;"></span>
+                        </div>
+
+                        <div class="last-div d-flex flex-row" style="gap: 46px;">
                             <div class="exp-div ">
-                                <label for=""><b>Exp Date</b> </label>
+                                <label for="text"><b>Exp Date</b> </label>
                                 <div class="two-inp-div d-flex" style="gap: 12px" ;>
-                                    <input type="name" id="input3" placeholder="17"
-                                        style="width: 87px; height: 55px; padding-left: 30px;">
+                                    <input type="text" id="input3" placeholder="12" minlength="2" maxlength="2"
+                                        oninput="validacia()" style="width: 87px; height: 55px; padding-left: 30px;">
                                     <span id="inp3"></span>
-                                    <input type="name" id="input4" placeholder="23"
-                                        style="width: 87px; height: 55px; padding-left: 30px;">
+                                    <input type="text" id="input4" placeholder="23" minlength="2" maxlength="2"
+                                        oninput="validacia()" style=" width: 87px; height: 55px; padding-left: 30px;">
                                     <span id="inp4"></span>
                                 </div>
                             </div>
                             <div class="cvc-div d-flex flex-column">
                                 <label for=""><b>CVC</b> </label>
-                                <input type="name" id="input5" placeholder="044" style="width: 258px; height: 55px; ">
+                                <input type="text" id="input5" placeholder="044" maxlength="3" oninput="validacia()"
+                                    style="width: 258px; height: 55px; ">
                                 <span id="inp5"></span>
                             </div>
                         </div><br><br>

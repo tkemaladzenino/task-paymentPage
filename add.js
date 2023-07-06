@@ -1,52 +1,81 @@
 
 
 
-
 function validacia() {
-    var input1 = document.getElementById("input1").value;
-    var pattern = /^[0-9]+$/;
-    var input2 = document.getElementById("input2");
-    var input3 = document.getElementById("input3");
-    var input4 = document.getElementById("input4");
-    var input5 = document.getElementById("input5");
+    const input1 = document.getElementById("input1");
+    const input1Value = input1.value;
 
+    const x = document.getElementById("input2");
+    const input2Value = x.value;
 
+    const y = document.getElementById("input3");
+    const input3Value = y.value;
 
-    if (input1.match(pattern)) {
-        document.getElementById("input1").style.border = "2px solid green";
-        document.getElementById("inp1").innerHTML = "";
+    const z = document.getElementById("input4");
+    const input4Value = z.value;
 
-    } else {
+    const g = document.getElementById("input5");
+    const input5Value = g.value;
+
+    if (isNaN(input1Value)) {
+        // Remove non-number characters
+        input1.value = input1Value.replace(/[^0-9]/g, '');
+        document.getElementById("input1").style.border = "3px solid red";
         document.getElementById("inp1").innerHTML = "Woops! wrong format, numbers only.";
-        document.getElementById("input1").style.border = "2px solid red";
+    } else if (input1.value == "" || input1.length == 0) {
+        input1.style.border = "3px solid red";
+    } else {
+        document.getElementById("input1").style.border = "3px solid green";
+        document.getElementById("inp1").innerHTML = "";
     }
 
+    if (/[^a-zA-Z]/.test(input2Value)) {
+        // Remove non-letter characters
+        x.value = input2Value.replace(/[^a-zA-Z]/g, '');
+        x.style.border = " 3px solid red";
+        document.getElementById("inp2").innerHTML = "forgot name?";
+    } else if (x.value == "" || x.length == 0) {
+        x.style.border = "3px solid red";
 
-    if (input2.value == "" || input2.length == 0) {
-        input2.style.border = "2px solid red";
-        document.getElementById("inp2").innerHTML = "Forgot name?";
     } else {
-        input2.style.border = " 2px solid green";
+        document.getElementById("input2").style.border = "3px solid green";
         document.getElementById("inp2").innerHTML = "";
     }
 
-    if (input3.value == "" || input3.length == 0) {
-        input3.style.border = "2px solid red";
-    } else {
-        input3.style.border = "2px solid green";
-    }
-    if (input4.value == "" || input4.length == 0) {
-        input4.style.border = "2px solid red";
+    if (isNaN(input3Value)) {
+        // Remove non-number characters
+        y.value = input3Value.replace(/[^0-9]/g, '');
+        document.getElementById("input3").style.border = "3px solid red";
 
+    } else if (y.value == "" || y.length == 0) {
+        y.style.border = "3px solid red";
     } else {
-        input4.style.border = "2px solid green";
+        document.getElementById("input3").style.border = "3px solid green";
     }
-    if (input5.value == "" || input5.length == 0) {
-        input5.style.border = "2px solid red";
 
+    if (isNaN(input4Value)) {
+        // Remove non-number characters
+        z.value = input4Value.replace(/[^0-9]/g, '');
+        document.getElementById("input4").style.border = "3px solid red";
+
+    } else if (z.value == "" || z.length == 0) {
+        z.style.border = "3px solid red";
     } else {
-        input5.style.border = "2px solid green";
+        document.getElementById("input4").style.border = "3px solid green";
     }
+
+    if (isNaN(input5Value)) {
+        // Remove non-number characters
+        g.value = input5Value.replace(/[^0-9]/g, '');
+        document.getElementById("input5").style.border = "3px solid red";
+
+    } else if (g.value == "" || g.length == 0) {
+        g.style.border = "3px solid red";
+    } else {
+        document.getElementById("input5").style.border = "3px solid green";
+    }
+
+
 
     return false;
 
